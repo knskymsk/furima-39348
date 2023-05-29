@@ -54,7 +54,6 @@ belongs_to  :managements
 | city                    | string    | null: false,                     |
 | address                 | string    | null: false,                     |
 | building_name           | string    |                                  |
-| user_id                 | integer   | null: false,  foreign_key: true  |
 
 
 ### Association
