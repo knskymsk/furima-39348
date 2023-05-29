@@ -51,7 +51,7 @@ belongs_to :management
 |          Column         |    Type   |            Options               |
 | ---------------------   | --------- | ------------------------------   |
 | zip_code                | string    | null: false,                     |
-| area_id                 | integer   | null: false,  foreign_key: true  |
+| area_id                 | integer   | null: false,                     |
 | city                    | string    | null: false,                     |
 | address                 | string    | null: false,                     |
 | building_name           | string    |                                  |
