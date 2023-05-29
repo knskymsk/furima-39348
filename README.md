@@ -24,16 +24,16 @@ has_one  :purchases
 
 ## items テーブル
 
-|          Column        |    Type   |            Options               |
-| ---------------------  | --------- | ------------------------------   |
-| name                   | string    | null: false,                     |
-| price                  | int       | null: false,                     |
-| description            | text      | null: false,                     |
-| shipping_charges       | string    | null: false,                     |
-| ares                   | string    | null: false,                     |
-| delivery_time          | string    | null: false,                     |
-| user_id                | integer   | null: false,  foreign_key: true  |
-| category_id            | integer   | null: false,  foreign_key: true  |
+|          Column        |    Type    |            Options               |
+| ---------------------  | ---------- | ------------------------------   |
+| name                   | string     | null: false,                     |
+| price                  | int        | null: false,                     |
+| description            | text       | null: false,                     |
+| shipping_charges       | string     | null: false,                     |
+| ares                   | string     | null: false,                     |
+| delivery_time          | string     | null: false,                     |
+| user                   | references | null: false,  foreign_key: true  |
+| category_id            | integer    | null: false,  foreign_key: true  |
 
 
 
