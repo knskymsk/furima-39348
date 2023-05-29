@@ -34,7 +34,7 @@ has_many :managements
 | area_id                | integer    | null: false,                     |
 | delivery_time_id       | integer    | null: false,                     |
 | user                   | references | null: false,  foreign_key: true  |
-| category_id            | integer    | null: false,  foreign_key: true  |
+| category_id            | integer    | null: false,                     |
 
 
 ### Association
