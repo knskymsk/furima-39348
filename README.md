@@ -79,10 +79,6 @@ belongs_to :items
 
 |          Column         |    Type   |            Options               |
 | ---------------------   | --------- | ------------------------------   |
-| family_name             | string    | null: false,                     |
-| first_name              | string    | null: false,                     |
-| family_name_katakana    | string    | null: false,                     |
-| first_name_katakana     | string    | null: false,                     |
 | zip_code                | string    | null: false,                     |
 | prefecture              | string    | null: false,                     |
 | city                    | string    | null: false,                     |
