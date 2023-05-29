@@ -44,20 +44,6 @@ has_many     :images
 
 
 
-## images テーブル
-
-|       Column        |     Type      |              Options               |
-| ------------------  | ------------- | ---------------------------------- |
-| image               | string        | null: false,                       |
-| orders_id           | integer       | null: false,    foreign_key: true  |
-
-
-
-### Association
-belongs_to :items
-
-
-
 
 
 ##  purchases テーブル
