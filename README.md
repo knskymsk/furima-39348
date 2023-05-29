@@ -31,7 +31,7 @@ has_one  :purchases
 | description            | text       | null: false,                     |
 | condition              | string     | null: false,                     |
 | shipping_charges_id    | integer    | null: false,                     |
-| ares_id                | integer    | null: false,                     |
+| area_id                | integer    | null: false,                     |
 | delivery_time_id       | integer    | null: false,                     |
 | user                   | references | null: false,  foreign_key: true  |
 | category_id            | integer    | null: false,  foreign_key: true  |
@@ -58,6 +58,7 @@ belongs_to   :user
 
 ### Association
 belongs_to :managements
+belongs_to :user
 
 
 
