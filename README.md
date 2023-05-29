@@ -7,7 +7,6 @@
 | nickname               | string    | null: false,                   |
 | email                  | string    | null: false,  unique: true     |
 | encrypted_password     | string    | null: false,                   |
-| user_image             | string    |                                |
 | family_name            | string    | null: false,                   |
 | first_name             | string    | null: false,                   |
 | family_name_katakana   | string    | null: false,                   |
