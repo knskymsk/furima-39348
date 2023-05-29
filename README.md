@@ -27,7 +27,7 @@ has_one  :managements
 |          Column        |    Type    |            Options               |
 | ---------------------  | ---------- | ------------------------------   |
 | name                   | string     | null: false,                     |
-| price                  | int        | null: false,                     |
+| price                  | integer    | null: false,                     |
 | description            | text       | null: false,                     |
 | condition              | string     | null: false,                     |
 | shipping_charges_id    | integer    | null: false,                     |
