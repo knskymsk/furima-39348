@@ -16,7 +16,7 @@
 
 ### Association
 has_many :items
-has_one :management
+has_many :managements
 
 
 
@@ -39,6 +39,8 @@ has_one :management
 
 ### Association
 belongs_to :user
+belongs_to :management
+
 
 
 
@@ -57,8 +59,7 @@ belongs_to :user
 
 
 ### Association
-belongs_to :user
-belongs_to :item
+belongs_to :management
 
 
 
@@ -76,3 +77,5 @@ belongs_to :item
 
 ### Association
 belongs_to :user
+belongs_to :item
+has_one :purchase
