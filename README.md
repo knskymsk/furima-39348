@@ -40,7 +40,7 @@ has_one :management
 
 ### Association
 belongs_to :user
-belongs_to :purchase
+
 
 
 
