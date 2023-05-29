@@ -28,7 +28,7 @@ has_one  :purchases
 | ---------------------  | --------- | ------------------------------   |
 | name                   | string    | null: false,                     |
 | price                  | int       | null: false,                     |
-| description            | string    |                                  |
+| description            | text      | null: false,                     |
 | shipping_charges       | string    | null: false,                     |
 | ares                   | string    | null: false,                     |
 | delivery_time          | string    | null: false,                     |
