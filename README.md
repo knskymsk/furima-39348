@@ -15,9 +15,9 @@
 
 
 ### Association
-has_many      :items dependent: :destroy
-orders        :purchases dependent: :destroy
-has_one       :card dependent: :destroy
+has_many      :items 
+orders        :purchases 
+has_one       :card 
 
 
 
@@ -32,7 +32,7 @@ has_one       :card dependent: :destroy
 
 
 ### Association
-belongs_to :users dependent: :destroy
+belongs_to :users 
 
 
 
@@ -55,9 +55,9 @@ belongs_to :users dependent: :destroy
 
 
 ### Association
-belongs_to   :user dependent: :destroy
-has_many     :images dependent: :destroy
-belongs_to   :categories dependent: :destroy
+belongs_to   :user 
+has_many     :images 
+belongs_to   :categories 
 
 
 
