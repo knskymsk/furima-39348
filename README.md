@@ -15,23 +15,8 @@
 
 
 ### Association
-has_many      :items 
-orders        :purchases 
-
-
-
-
-## card テーブル
-
-|       Column        |     Type      |              Options               |
-| ------------------  | ------------- | ---------------------------------- |
-| user_id             | integer       | null: false,    foreign_key: true  |
-| customer            | string        | null: false,                       |
-| card                | string        | null: false,                       |
-
-
-### Association
-belongs_to :users 
+has_many :items 
+has_one  :purchases
 
 
 
