@@ -17,7 +17,6 @@
 ### Association
 has_many      :items 
 orders        :purchases 
-has_one       :card 
 
 
 
