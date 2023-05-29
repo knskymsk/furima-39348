@@ -39,7 +39,7 @@ has_many :managements
 
 ### Association
 belongs_to :user
-belongs_to :management
+has_one :management
 
 
 
