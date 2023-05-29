@@ -1,24 +1,114 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## users テーブル
 
-* Ruby version
+|          Column        |    Type   |            Options             |
+| ------------------     | --------- | ------------------------------ |
+| nickname               | string    | null: false,  unique: true     |
+| email                  | string    | null: false,  unique: true     |
+| user_password          | string    | null: false,  unique: true     |
+| user_image             | string    |                                |
+| family_name            | string    | null: false,                   |
+| first_name             | string    | null: false,                   |
+| family_name_katakana   | string    | null: false,                   |
+| first_name_katakana    | string    | null: false,                   |
+| birthday               | date      | null: false,                   |
 
-* System dependencies
 
-* Configuration
+### Association
+has_many      :items dependent: :destroy
+orders        :purchases dependent: :destroy
+has_one       :card dependent: :destroy
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## card テーブル
 
-* Deployment instructions
+|       Column        |     Type      |              Options               |
+| ------------------  | ------------- | ---------------------------------- |
+| user_id             | integer       | null: false,    foreign_key: true  |
+| customer            | string        | null: false,                       |
+| card                | string        | null: false,                       |
 
-* ...
+
+### Association
+belongs_to :users dependent: :destroy
+
+
+
+
+
+## items テーブル
+
+|          Column        |    Type   |            Options               |
+| ---------------------  | --------- | ------------------------------   |
+| name                   | string    | null: false,                     |
+| image                  | string    | null: false,                     |
+| price                  | string    | null: false,                     |
+| description            | string    |                                  |
+| shipping_charges       | string    | null: false,                     |
+| ares                   | string    | null: false,                     |
+| delivery_time          | string    | null: false,                     |
+| user_id                | integer   | null: false,  foreign_key: true  |
+| category_id            | integer   | null: false,  foreign_key: true  |
+
+
+
+### Association
+belongs_to   :user dependent: :destroy
+has_many     :images dependent: :destroy
+belongs_to   :categories dependent: :destroy
+
+
+
+## images テーブル
+
+|       Column        |     Type      |              Options               |
+| ------------------  | ------------- | ---------------------------------- |
+| image               | string        | null: false,                       |
+| orders_id           | integer       | null: false,    foreign_key: true  |
+
+
+
+### Association
+belongs_to :items
+
+
+
+
+## categories テーブル
+
+|       Column        |     Type      |     Options      |
+| ------------------  | ------------- | ---------------- |
+| name                | string        | null: false,     |
+| ancestry            | string        |                  |
+
+
+
+### Association
+has_many :items
+
+
+
+
+
+##  purchases テーブル
+
+|          Column         |    Type   |            Options               |
+| ---------------------   | --------- | ------------------------------   |
+| family_name             | string    | null: false,                     |
+| first_name              | string    | null: false,                     |
+| family_name_katakana    | string    | null: false,                     |
+| first_name_katakana     | string    | null: false,                     |
+| zip_code                | string    | null: false,                     |
+| prefecture              | string    | null: false,                     |
+| city                    | string    | null: false,                     |
+| address                 | string    | null: false,                     |
+| building_name           | string    | null: false,                     |
+| user_id                 | integer   | null: false,  foreign_key: true  |
+
+
+### Association
+belongs_to   :user 
+
