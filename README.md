@@ -39,8 +39,8 @@ has_one  :managements
 
 
 ### Association
-belongs_to  :users 
-belongs_to  :managements
+belongs_to  :user
+belongs_to  :management
 
 
 
@@ -58,7 +58,7 @@ belongs_to  :managements
 
 
 ### Association
-belongs_to :users
+belongs_to :user
 
 
 
@@ -74,4 +74,4 @@ belongs_to :users
 
 
 ### Association
-belongs_to :users
+belongs_to :user
