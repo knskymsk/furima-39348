@@ -29,9 +29,10 @@ has_one  :purchases
 | name                   | string     | null: false,                     |
 | price                  | int        | null: false,                     |
 | description            | text       | null: false,                     |
-| shipping_charges       | string     | null: false,                     |
-| ares                   | string     | null: false,                     |
-| delivery_time          | string     | null: false,                     |
+| condition              | string     | null: false,                     |
+| shipping_charges_id    | integer    | null: false,                     |
+| ares_id                | integer    | null: false,                     |
+| delivery_time_id       | integer    | null: false,                     |
 | user                   | references | null: false,  foreign_key: true  |
 | category_id            | integer    | null: false,  foreign_key: true  |
 
