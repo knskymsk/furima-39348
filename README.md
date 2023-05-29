@@ -53,7 +53,7 @@ belongs_to :purchase
 | area_id                 | integer   | null: false,                     |
 | city                    | string    | null: false,                     |
 | address                 | string    | null: false,                     |
-| building_name           | string    |                                  |
+| building_name           | string    | null: false,                     |
 | phone_number            | string    | null: false,                     |          
 
 
@@ -71,7 +71,7 @@ belongs_to :item
 |       Column        |     Type      |              Options               |
 | ------------------  | ------------- | ---------------------------------- |
 | user                | references    | null: false,  foreign_key: true    |
-| item               | references    | null: false,  foreign_key: true    |
+| item                | references    | null: false,  foreign_key: true    |
 
 
 
