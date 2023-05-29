@@ -27,7 +27,7 @@ has_one  :purchases
 |          Column        |    Type   |            Options               |
 | ---------------------  | --------- | ------------------------------   |
 | name                   | string    | null: false,                     |
-| price                  | string    | null: false,                     |
+| price                  | int       | null: false,                     |
 | description            | string    |                                  |
 | shipping_charges       | string    | null: false,                     |
 | ares                   | string    | null: false,                     |
