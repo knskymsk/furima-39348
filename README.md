@@ -29,7 +29,7 @@ has_one  :managements
 | name                   | string     | null: false,                     |
 | price                  | integer    | null: false,                     |
 | description            | text       | null: false,                     |
-| condition              | string     | null: false,                     |
+| condition_id           | integer    | null: false,                     |
 | shipping_charges_id    | integer    | null: false,                     |
 | area_id                | integer    | null: false,                     |
 | delivery_time_id       | integer    | null: false,                     |
