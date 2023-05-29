@@ -37,10 +37,8 @@ has_one  :purchases
 | category_id            | integer    | null: false,  foreign_key: true  |
 
 
-
 ### Association
 belongs_to   :user 
-has_many     :images 
 
 
 
@@ -59,17 +57,19 @@ has_many     :images
 
 
 ### Association
-belongs_to :user 
-has_one :managements
+belongs_to :managements
+
+
 
 
 ## managements テーブル
 
 |       Column        |     Type      |              Options               |
 | ------------------  | ------------- | ---------------------------------- |
-| user_id             | integer       | null: false,  foreign_key: true    |
+| user                | references    | null: false,  foreign_key: true    |
+| items               | references    | null: false,  foreign_key: true    |
 
 
 
 ### Association
-belongs_to :purchases
+has_one :purchases
