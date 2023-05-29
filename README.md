@@ -56,7 +56,6 @@ belongs_to :users
 ### Association
 belongs_to   :user 
 has_many     :images 
-belongs_to   :categories 
 
 
 
@@ -71,21 +70,6 @@ belongs_to   :categories
 
 ### Association
 belongs_to :items
-
-
-
-
-## categories テーブル
-
-|       Column        |     Type      |     Options      |
-| ------------------  | ------------- | ---------------- |
-| name                | string        | null: false,     |
-| ancestry            | string        |                  |
-
-
-
-### Association
-has_many :items
 
 
 
