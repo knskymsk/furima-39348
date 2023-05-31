@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      attributes:
+        user:
+          nickname: ニックネーム
+          email: メールアドレス
+          birthday: 誕生日
+          family_name: 苗字
+          first_name: 名前
+          family_name_katakana: 苗字カタカナ
+          first_name_katakana: 名前カタカナ
+      errors:
+        models:
+          user:
+            blank: を入力してください
