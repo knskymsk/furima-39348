@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   belongs_to :shipping_charge
   belongs_to :area
   belongs_to :delivery_time
+  belongs_to :user
 
   validates :name,                presence: true
   validates :description,         presence: true
