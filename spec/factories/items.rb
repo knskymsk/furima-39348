@@ -1,6 +1,6 @@
 FactoryBot.define do
-
   factory :item do
+
     name                         {"商品名"}
     description                  {"説明"}
     category_id                  {2}
@@ -8,7 +8,7 @@ FactoryBot.define do
     shipping_charge_id           {2}
     area_id                      {2}
     delivery_time_id             {2}
-    price                        {"2000"}
+    price                        { Faker::Number.between(from: 300, to: 9_999_999) }
     association :user
 
     after(:build) do |item|
