@@ -10,20 +10,26 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
   end
-  
-
-  def create
-    @item = Item.new(item_params)
-    if @item.save
-      redirect_to root_path
-    else
-      render :new
-    end
-  end
 
 
   def show
     @item = Item.find(params[:id])
+  end
+
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+
+  def update
+    @item = Item.find(params[:id])
+  
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render :edit
+    end
   end
 
 
@@ -32,4 +38,6 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:image, :name, :description, :price, :condition_id, :shipping_charge_id, :area_id, :delivery_time_id, :category_id).merge(user_id: current_user.id)
   end
+
+
 end
