@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to :area
   belongs_to :delivery_time
   belongs_to :user
-  #has_one    :order
+  has_one    :management
 
 
   validates :name,                presence: true
