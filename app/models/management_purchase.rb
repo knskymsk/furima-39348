@@ -7,7 +7,7 @@ class ManagementPurchase
     validates :city
     validates :address
     #validates :building_name
-    validates :phone_number, format: { with: /\A[0-9]{11}\z/, message: 'is invalid' }
+    validates :phone_number, format: { with: /\A0\d{9,10}\z/ }
     validates :user_id
     validates :item_id
     validates :token
