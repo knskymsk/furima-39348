@@ -1,5 +1,6 @@
 class ManagementPurchase
   include ActiveModel::Model
+  attr_accessor :zip_code, :area_id, :city, :address, :building_name, :phone_number, :management_id, :user_id, :item_id, :token
 
   with_options presence: true do
     validates :zip_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
@@ -7,7 +8,7 @@ class ManagementPurchase
     validates :city
     validates :address
     #validates :building_name
-    validates :phone_number, format: { with: /\A0\d{9,10}\z/ }
+    validates :phone_number, format: { with: /\A\d{10,11}\z/ }
     validates :user_id
     validates :item_id
     validates :token

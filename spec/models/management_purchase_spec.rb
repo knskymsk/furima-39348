@@ -100,6 +100,11 @@ RSpec.describe ManagementPurchase, type: :model do
         @management_purchase.valid?
         expect(@management_purchase.errors.full_messages).to include('Phone number is invalid')
       end
+      it '電話番号が9桁以下であると保存できないこと' do
+        @management_purchase.phone_number = 12_345_678
+        @management_purchase.valid?
+        expect(@management_purchase.errors.full_messages).to include('Phone number is invalid')
+      end
       it 'トークンが空だと保存できないこと' do
         @management_purchase.token = nil
         @management_purchase.valid?
