@@ -1,5 +1,5 @@
 class ManagementsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :non_purchase_item, only: [:index, :create]
 
   def index
