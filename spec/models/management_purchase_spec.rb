@@ -100,6 +100,11 @@ RSpec.describe ManagementPurchase, type: :model do
         @management_purchase.valid?
         expect(@management_purchase.errors.full_messages).to include('Phone number is invalid')
       end
+      it 'トークンが空だと保存できないこと' do
+        @management_purchase.token = nil
+        @management_purchase.valid?
+        expect(@management_purchase.errors.full_messages).to include("Token can't be blank")
+      end
     end
   end
 end
