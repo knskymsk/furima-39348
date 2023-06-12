@@ -17,6 +17,7 @@ class ManagementsController < ApplicationController
     end
   end
 
+
   private
 
   def management_params
@@ -33,8 +34,13 @@ class ManagementsController < ApplicationController
   end
 
   def non_purchase_item
+    unless user_signed_in?
+      redirect_to user_session_path
+      return
+    end
+    
     @item = Item.find(params[:item_id])
-    redirect_to user_session_path if @item.user_id || @item.management.present?
+    redirect_to user_session_path if current_user.id == @item.user_id || @item.management.present?
   end
 
 end
